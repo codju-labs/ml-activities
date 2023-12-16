@@ -35,24 +35,24 @@ function initDemoPage() {
 }
 
 function onContinue() {
-  const nextRadioButton = $(`#${currentAppMode}`).next();
-  if (nextRadioButton.length > 0) {
-    nextRadioButton.prop('checked', true);
-    onLevelChange({
-      target: {
-        id: nextRadioButton.attr('id')
-      }
-    });
-  }
+  messageData = {
+    type: 'ACTIVITY_COMPLETION',
+    data: {
+      success: false
+    }
+  };
+  // window.parent.postMessage(messageData);
+  console.log('when is this called?');
 }
 
 $(document).ready(() => {
-  // Set up canvases.
-  canvas = document.getElementById('activity-canvas');
-  backgroundCanvas = document.getElementById('background-canvas');
+                          // Set up canvases.
+                          canvas = document.getElementById(
+                            'activity-canvas'
+                          );
+                          backgroundCanvas = document.getElementById(
+                            'background-canvas'
+                          );
 
-  $(`#${currentAppMode}`).prop('checked', true);
-  $('.level-radio').change(onLevelChange);
-
-  initDemoPage();
-});
+                          initDemoPage();
+                        });

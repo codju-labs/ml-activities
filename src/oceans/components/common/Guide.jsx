@@ -78,8 +78,8 @@ let UnwrappedGuide = class Guide extends React.Component {
                   )}
                   <div style={styles.guideTypingText}>
                     <Typist
-                      avgTypingDelay={35}
-                      stdTypingDelay={15}
+                      avgTypingDelay={3}
+                      stdTypingDelay={1}
                       cursor={{show: false}}
                       onTypingDone={this.onShowing}
                     >
@@ -98,7 +98,10 @@ let UnwrappedGuide = class Guide extends React.Component {
                     </div>
                   </div>
                   {currentGuide.style === 'Info' && (
-                    <Button style={styles.infoGuideButton} onClick={() => {}}>
+                    <Button
+                      style={styles.infoGuideButton}
+                      onClick={() => {}}
+                    >
                       {I18n.t('continue')}
                     </Button>
                   )}

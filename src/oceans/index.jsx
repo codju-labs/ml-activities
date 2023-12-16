@@ -35,24 +35,20 @@ function initDemoPage() {
 }
 
 function onContinue() {
-  messageData = {
+  const messageData = {
     type: 'ACTIVITY_COMPLETION',
     data: {
-      success: false
+      success: true
     }
   };
-  // window.parent.postMessage(messageData);
-  console.log('when is this called?');
+  window.parent.postMessage(messageData);
+  //console.log('when is this called?');
 }
 
 $(document).ready(() => {
-                          // Set up canvases.
-                          canvas = document.getElementById(
-                            'activity-canvas'
-                          );
-                          backgroundCanvas = document.getElementById(
-                            'background-canvas'
-                          );
+  // Set up canvases.
+  canvas = document.getElementById('activity-canvas');
+  backgroundCanvas = document.getElementById('background-canvas');
 
-                          initDemoPage();
-                        });
+  initDemoPage();
+});

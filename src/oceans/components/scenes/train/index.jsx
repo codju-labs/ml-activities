@@ -94,7 +94,8 @@ let UnwrappedTrain = class Train extends React.Component {
           style={styles.continueButton}
           onClick={() => modeHelpers.toMode(Modes.Predicting)}
         >
-          {I18n.t('continue')}
+          {/* {I18n.t('continue')} */}
+         Train
         </Button>
       </Body>
     );

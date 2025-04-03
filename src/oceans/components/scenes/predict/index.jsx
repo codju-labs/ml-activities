@@ -147,7 +147,8 @@ let UnwrappedPredict = class Predict extends React.Component {
             id="uitest-run-btn"
           >
             <FontAwesomeIcon icon={faPlay} />
-            &nbsp; &nbsp; {I18n.t('run')}
+            {/* &nbsp; &nbsp; {I18n.t('run')} */}
+            &nbsp; &nbsp; {"Test"}
           </Button>
         )}
         {(state.isRunning || state.isPaused) && state.canSkipPredict && (

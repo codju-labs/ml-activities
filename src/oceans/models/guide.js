@@ -45,67 +45,6 @@ const guides = [
     arrow: 'LowerCenter'
   },
   {
-    id: 'fishvtrash-training-pause1',
-    textFn: () => I18n.t('fishvtrash-training-pause1'),
-    when: {
-      appMode: AppMode.FishVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 5;
-      }
-    },
-    style: 'Info',
-    image: trashBottleImage,
-    imageStyle: imageStyleOverrides.bottle
-  },
-  {
-    id: 'fishvtrash-training-pause2',
-    textFn: () => I18n.t('fishvtrash-training-pause2'),
-    when: {
-      appMode: AppMode.FishVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 5;
-      }
-    }
-  },
-  {
-    id: 'fishvtrash-training-pause3',
-    textFn: () => I18n.t('fishvtrash-training-pause3'),
-    when: {
-      appMode: AppMode.FishVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 15;
-      }
-    },
-    style: 'Info',
-    image: trashCanImage,
-    imageStyle: imageStyleOverrides.can
-  },
-  {
-    id: 'fishvtrash-training-pause4',
-    textFn: () => I18n.t('fishvtrash-training-pause4'),
-    when: {
-      appMode: AppMode.FishVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 15;
-      }
-    }
-  },
-  {
-    id: 'fishvtrash-training-pause5',
-    textFn: () => I18n.t('fishvtrash-training-pause5'),
-    when: {
-      appMode: AppMode.FishVTrash,
-      currentMode: Modes.Training,
-      fn: state => {
-        return state.yesCount + state.noCount >= 30;
-      }
-    }
-  },
-  {
     id: 'fishvtrash-predicting-init1',
     textFn: () => I18n.t('fishvtrash-predicting-init1'),
     when: {appMode: AppMode.FishVTrash, currentMode: Modes.Predicting}

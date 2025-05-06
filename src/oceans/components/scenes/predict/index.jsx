@@ -32,6 +32,10 @@ let UnwrappedPredict = class Predict extends React.Component {
     if (state.appMode !== AppMode.CreaturesVTrashDemo) {
       this.setState({displayControls: true});
     }
+    parent.postMessage({
+      type: "ACTION_LOG",
+      log: {log: "test_clicked"},
+    });
   };
 
   onContinue = () => {

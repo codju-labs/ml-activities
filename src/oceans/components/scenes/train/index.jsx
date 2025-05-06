@@ -92,7 +92,13 @@ let UnwrappedTrain = class Train extends React.Component {
         </div>
         <Button
           style={styles.continueButton}
-          onClick={() => modeHelpers.toMode(Modes.Predicting)}
+          onClick={() => {
+            modeHelpers.toMode(Modes.Predicting)
+            parent.postMessage({
+              type: "ACTION_LOG",
+              log: {log: "train_clicked"},
+            });
+          }}
         >
           {/* {I18n.t('continue')} */}
          Train

@@ -254,6 +254,10 @@ let UnwrappedPond = class Pond extends React.Component {
                 onClick={() => {
                   modeHelpers.toMode(Modes.Training);
                   setState({pondClickedFish: null, pondPanelShowing: false});
+                  parent.postMessage({
+                    type: "ACTION_LOG",
+                    log: {log: "train_more_clicked"},
+                  });
                 }}
               >
                 {I18n.t('trainMore')}
